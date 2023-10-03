@@ -21,8 +21,8 @@ function Employee() {
     const data=response.json();
     if(response.status===200){
       alert("Employee Deleted Successfully");
+      get_data();
       console.log(data);
-      window.location.reload(true)
     }
     else{
       console.log("Error occurred!")
@@ -67,7 +67,8 @@ function Employee() {
           <td className="border border-gray-300 md:py-2 md:px-4 py-1 px-1 ">$ {item.salary}</td>
           <div className='md:flex md:flex-row md:justify-around flex flex-col gap-2 mt-2 '>
           <Link to={`/employee_edit/` + item._id}><button className=" bg-blue-500 text-white text-lg w-20 h-auto m-2">Edit</button></Link>
-          <button onClick={e=>handle_click(item._id)} className="bg-red-500 text-white w-20 h-auto text-lg m-2">Delete</button></div>
+  <button  onClick={e=>handle_click(item._id)} className="bg-red-500 text-white w-20 h-auto text-lg m-2">Delete</button>
+</div>
         </tr>
       )
     })}

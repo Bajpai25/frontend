@@ -10,6 +10,7 @@ function Employee_edit() {
   const [password,setpassword]=useState('');
   const [address,setaddress]=useState('');
   const [salary,setsalary]=useState('');
+  const [edit,setedit]=useState(false);
   const navigate=useNavigate();
   const {id}=useParams();
   async function get_data_id(){
@@ -40,7 +41,7 @@ function Employee_edit() {
       console.log(data);
       if(response.status===200){
         alert("Employee Updated successfully!");
-        window.location.href="/employee";
+       setedit(true);
       }
       else{
         alert('Error',response.status.text);
@@ -78,6 +79,13 @@ function Employee_edit() {
           <label className='text-left text-xl font-semibold'>Salary</label>
           <input type="number" required value={salary}  onChange={(e)=>{setsalary(e.target.value)}}  placeholder='Enter Amount' className='border-gray-400 border-solid border-2  text-lg p-3 w-auto md:w-[400px]'></input>
         <button type='submit' className='bg-blue-600 text-xl text-white rounded-lg p-2 w-28 h-auto mb-2'>Update</button>
+        {edit ? (
+  <Link to="/employee">
+    <button className='bg-blue-600 w-40 h-14 text-xl m-4 mt-8 mb-8 ml-4 rouunded-full text-white font-semibold'>
+      Dashboard
+    </button>
+  </Link>
+) : null}
         </form>
       </div>
     </div>
