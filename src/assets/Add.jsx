@@ -39,7 +39,7 @@ function Add() {
     <>
     <div className='md:flex md:flex-row flex flex-col'>
     <div>
-    <div className='bg-[#333] md:w-[340px] md:h-screen md:items-left md:justify-start md:flex md:flex-col flex flex-row justify-around w-full h-20  md:gap-20'>
+    <div className='bg-[#333] md:w-[340px] md:h-full md:items-left md:justify-start md:flex md:flex-col flex flex-row justify-around w-full h-20  md:gap-20'>
       <h1 className='md:text-4xl text-2xl text-white font-sans p-2'>Menu</h1>
        <Link to="/employee"><li className='flex flex-row md:text-2xl text-xl p-2 md:border-b-2 md:border-white text-white font-sans hover:text-blue-600'><BsFillPeopleFill className='mr-2'/> Manage Employee</li></Link>
        <Link to="/"><li className='flex flex-row md:text-2xl text-xl p-2 md:border-b-2 md:border-white text-white font-sans hover:text-blue-600'><AiOutlineLogout className='mr-2'/> Logout</li></Link>
