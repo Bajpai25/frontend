@@ -4,6 +4,7 @@ import {Link} from "react-router-dom"
 function Login() {
     const [email,setemail]=useState('');
     const [password,setpassword]=useState('');
+    const [loginSuccessful, setLoginSuccessful] = useState(false); 
    async function handlesubmit(e){
     e.preventDefault();
     try{
@@ -15,9 +16,9 @@ function Login() {
         })
     }
     )
-    if(response.status===201){
-        alert("Login successfull");
-        window.location.href="/employee";
+    if (response.status === 201) {
+        alert('Login successful');
+        setLoginSuccessful(true);
     }
     else{
         alert("Invalid Login credentials.. Please register");
@@ -49,7 +50,14 @@ catch(err){
             <button type="submit"  className='bg-green-600 text-white  font-semibold text-xl w-3/4  h-14 ml-2 mr-2 mt-2 mb-2'>Log in</button>
             <p className='text-gray-600 p-4 text-xl font-mono'>You agree to our terms and policies</p>
             <Link to="/create"><button className='bg-blue-600 w-40 h-14 text-xl m-4 mt-8 mb-8 ml-4 rouunded-full text-white font-semibold'>Create account</button></Link>
-        </form>
+            {loginSuccessful ? (
+  <Link to="/employee">
+    <button className='bg-blue-600 w-40 h-14 text-xl m-4 mt-8 mb-8 ml-4 rouunded-full text-white font-semibold'>
+      Proceed
+    </button>
+  </Link>
+) : null}
+</form>
     </div>
     </div>
     </div>
