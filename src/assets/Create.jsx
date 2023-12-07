@@ -1,6 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState,useRef,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 function Create() {
+  const videoRef=useRef(null);
+
+ useEffect(()=>{
+  if(videoRef.current){
+    videoRef.current.play();
+  }
+ },[])
   const [first,setfirst]=useState('');
   const [last,setlast]=useState('');
   const [email,setnewemail]=useState('');
@@ -27,7 +34,8 @@ function Create() {
 }
   return (
        <div className='bg-gray-200 w-full md:h-full h-[1200px] relative'>
-    <img src="https://th.bing.com/th/id/OIG.4cHvqo2j0QPFf8GXKQ9J?pid=ImgGn" className='relative bg-cover w-full h-full'></img>
+    <video ref={videoRef} src="https://www.shutterstock.com/shutterstock/videos/1076130974/preview/stock-footage-diverse-company-employees-having-online-business-conference-video-call-on-tv-screen-monitor-in.webm" 
+    className='filter blur-sm bg-cover w-full h-full ' autoplay loop muted ></video>
     <div className='flex flex-col  items-center  pt-8  p-4 absolute inset-0'>
     <div className='bg-white m-1 p-2 rounded w-auto h-auto shadow-xl shadow-gray-800'>
         <h2 className='text-4xl p-4 font-bold text-gray-600 text-center'>Register</h2>

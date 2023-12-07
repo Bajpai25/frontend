@@ -40,7 +40,7 @@ function Employee() {
     </div>
     <div className='w-full'>
     <div className='shadow-xl shadow-gray-400 '>
-        <h1 className='text-center p-8 md:text-4xl text-2xl font-bold font-sans'>Employee Management System</h1>
+        <h1 className='text-center p-8 md:text-4xl text-2xl font-bold font-sans'>Employee Dashboard</h1>
     </div>
     <div className='px-5 py-3'>
       <div className='flex flex-row justify-around'>
