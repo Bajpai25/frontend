@@ -43,8 +43,8 @@ catch(err){
     <div className='bg-gray-200 w-full md:h-full h-[1200px] relative'>
     <video ref={videoRef} src="https://www.shutterstock.com/shutterstock/videos/1076130974/preview/stock-footage-diverse-company-employees-having-online-business-conference-video-call-on-tv-screen-monitor-in.webm" 
     className='filter blur-sm bg-cover w-full h-full ' autoplay loop muted ></video>
-    <div className='flex flex-col  items-center pt-4  p-4 absolute inset-0'>
-    <div className='bg-white m-1 p-2 rounded w-auto h-auto shadow-xl shadow-gray-800'>
+    <div className='flex flex-col  items-center pt-4  p-4 absolute inset-0 '>
+    <div  className='  m-1 p-2 rounded w-auto h-auto shadow-xl shadow-gray-800 backdrop-blur-md '>
         <h2 className='text-4xl p-4 font-bold text-gray-600 text-center'>Login</h2>
         <form onSubmit={handlesubmit} action='#' className=' flex flex-col gap-2'>
             <div className='mb-8 mt-8 flex flex-col  flex-wrap md:flex md:flex-row gap-8'>

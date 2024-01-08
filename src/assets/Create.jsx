@@ -36,16 +36,16 @@ function Create() {
        <div className='bg-gray-200 w-full md:h-full h-[1200px] relative'>
     <video ref={videoRef} src="https://www.shutterstock.com/shutterstock/videos/1076130974/preview/stock-footage-diverse-company-employees-having-online-business-conference-video-call-on-tv-screen-monitor-in.webm" 
     className='filter blur-sm bg-cover w-full h-full ' autoplay loop muted ></video>
-    <div className='flex flex-col  items-center  pt-8  p-4 absolute inset-0'>
-    <div className='bg-white m-1 p-2 rounded w-auto h-auto shadow-xl shadow-gray-800'>
+    <div className='flex flex-col  items-center  pt-4  p-4 absolute inset-0'>
+    <div className='backdrop-blur-md m-1 p-2 rounded w-auto h-auto shadow-xl shadow-gray-800'>
         <h2 className='text-4xl p-4 font-bold text-gray-600 text-center'>Register</h2>
         <form onSubmit={registerdata}  className=' flex flex-col gap-2'>
-            <div className='mb-8 mt-8 flex flex-col  flex-wrap md:flex md:flex-row gap-8'>
+            <div className='mb-8 mt-8 flex flex-col  flex-wrap md:flex md:flex-row gap-3'>
             <label><strong className='text-2xl text-gray-600 p-4'>First Name</strong></label>
             <input required value={first} onChange={(e)=>{setfirst(e.target.value)}}   type='text'  
              className='border-gray-200 border-solid border-2  text-lg p-3 w-auto md:w-[400px]'/>
             </div>
-            <div className='mb-8 mt-8 flex flex-col  flex-wrap md:flex md:flex-row gap-8'>
+            <div className='mb-8 mt-8 flex flex-col  flex-wrap md:flex md:flex-row gap-3'>
             <label><strong className='text-2xl text-gray-600 p-4'>Last Name</strong></label>
             <input required value={last} onChange={(e)=>{setlast(e.target.value)}} type='text'  
              className='border-gray-200 border-solid border-2  text-lg p-3 w-auto md:w-[400px]'/>
